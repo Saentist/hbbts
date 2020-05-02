@@ -90,19 +90,19 @@ echo _header();
 <?
 $channels = fileread(__DIR__ . "/src/channels.db");
 if(!isset($channels[$_SESSION['uri']])){
-  echo "<div style='color:red;top:300px;background-color:#000;padding:20px;left:435px;'>Отредактируйте файл `/channels.db`<br />Канал `{$_SESSION['uri']}` не найден!</div>";
+  echo "<div style='color:red;top:300px;background-color:#000;padding:20px;left:435px;'>Редактирайте фаела `/channels.db`<br />Канал `{$_SESSION['uri']}` не е намерен!</div>";
 }else{
-  echo '<div id="appendix" style="bottom:2px;right:3px;font:15px/1em Tahoma;color:white;background-color:#333;border-radius:3px;padding:3px 5px;opacity:0.8;">Канал ' . mb_strtoupper($_SESSION['uri']) . ' можно поставить на ПАУЗУ (не более ' . $max_timeshift . ' мин.)</div>';
+  echo '<div id="appendix" style="bottom:2px;right:3px;font:15px/1em Tahoma;color:white;background-color:#333;border-radius:3px;padding:3px 5px;opacity:0.8;">Може да поставите канала ' . mb_strtoupper($_SESSION['uri']) . ' на ПАУЗА (за не повече от ' . $max_timeshift . ' мин.)</div>';
 }
 ?>
 
-<div id='message' style='opacity:0.8;background-color:#333;width:450px;height:250px;bottom:0px;left:420px;color:#eee;padding:10px;display:none;'>
-<div id='flash' style='width:100%;text-align:center;color:#fff;top:18px;' >ВКЛЮЧЁН TIMESHIFT!</div>
+<div id='message' style='opacity:0.7;background-color:#333;width:450px;height:250px;bottom:0px;left:420px;color:#eee;padding:10px;display:none;'>
+<div id='flash' style='width:100%;text-align:center;color:#f00;top:18px;' >ВКЛЮЧЕН TIMESHIFT!</div>
 <div style='width:90%;top:55px;left:22px;border-top:1px solid #ccc;'></div>
-<div style='top:70px;color:#eee;height:110px;left:20px;'>Время старта: <span id='start'>-</span><br />Время сейчас: <span id='now'>-</span><br />Время записи: <span id='total'>-</span> (max <?=$max_timeshift?> мин)<br />Объём файла: <span id='size'>-</span></div>
+<div style='top:70px;color:#eee;height:110px;left:20px;'>Време на старт: <span id='start'>-</span><br />Време сега:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id='now'>-</span><br />Време запис:&nbsp;&nbsp;&nbsp;&nbsp; <span id='total'>-</span> (max <?=$max_timeshift?> мин.)<br />Обем фаела:&nbsp;&nbsp;&nbsp;&nbsp; <span id='size'>-</span></div>
 <div style='width:90%;top:188px;left:22px;border-top:1px solid #ccc;'></div>
-<div style='left:20px;bottom:30px;'><span style='padding:5px 15px;background-color:#eee;color:#111;'>▶</span> старт с таймшифтом</div>
-<div style='left:20px;bottom:0px;'><span style='padding:5px 15px;background-color:#eee;color:#111;'>■</span> выход</div>
+<div style='left:20px;bottom:30px;'><span style='padding:5px 15px;background-color:#eee;color:#111;'>▶</span> старт от таймшифта</div>
+<div style='left:20px;bottom:0px;'><span style='padding:5px 15px;background-color:#eee;color:#111;'>■</span> изход</div>
 
 </div>
 
